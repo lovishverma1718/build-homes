@@ -5,20 +5,20 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 
 // Lazy load pages for optimized bundle size & Lighthouse performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Flooring = lazy(() => import('./pages/services/Flooring'));
-const Painting = lazy(() => import('./pages/services/Painting'));
-const KitchenCabinets = lazy(() => import('./pages/services/KitchenCabinets'));
-const BathroomRenovation = lazy(() => import('./pages/services/BathroomRenovation'));
-const Landscaping = lazy(() => import('./pages/services/Landscaping'));
-const Process = lazy(() => import('./pages/Process'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Contact = lazy(() => import('./pages/Contact'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Services = lazy(() => import('./pages/Services').then(m => ({ default: m.Services })));
+const Flooring = lazy(() => import('./pages/services/Flooring').then(m => ({ default: m.Flooring })));
+const Painting = lazy(() => import('./pages/services/Painting').then(m => ({ default: m.Painting })));
+const KitchenCabinets = lazy(() => import('./pages/services/KitchenCabinets').then(m => ({ default: m.KitchenCabinets })));
+const BathroomRenovation = lazy(() => import('./pages/services/BathroomRenovation').then(m => ({ default: m.BathroomRenovation })));
+const Landscaping = lazy(() => import('./pages/services/Landscaping').then(m => ({ default: m.Landscaping })));
+const Process = lazy(() => import('./pages/Process').then(m => ({ default: m.Process })));
+const FAQ = lazy(() => import('./pages/FAQ').then(m => ({ default: m.FAQ })));
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicy })));
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions').then(m => ({ default: m.TermsAndConditions })));
+const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 // Scroll Restoration helper
 const ScrollToTop = () => {
